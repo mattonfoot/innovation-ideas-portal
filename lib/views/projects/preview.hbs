@@ -3,5 +3,37 @@
     <h1>{{title}}</h1>
   </div>
 
-  <p class="lead">This is a bootstrap project for rapid experimentation on Multichain blockchains using light-weight HTML interfaces</p>
+  <article>
+    <header>
+      <h2>Project title goes here</h2>
+
+      <p><strong>Status:</strong> project ststus goes here</p>
+    </header>
+
+    <ul class="nav nav-tabs">
+      <li role="presentation" class="active"><a href="#description">Description</a></li>
+      <li role="presentation"><a href="#updates">Updates <span class="badge badge-info">0</span></a></li>
+      <li role="presentation"><a href="#comments">Comments <span class="badge badge-info">0</span></a></li>
+      <li role="presentation"><a href="#official">Official Comments <span class="badge badge-info">0</span></a></li>
+      <li role="presentation"><a href="#repository">Repository</a></li>
+    </ul>
+
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="description">
+        <div class="alert alert-info"><strong>Status:</strong> Gathering support</div>
+
+        <p>Description goes here...</p>
+
+        <ul class="list-inline">
+          <li><span class="btn btn-default">Experiment <span class="badge">x</span></span><li>
+            <li><span class="btn btn-default">Docker <span class="badge">x</span></span><li>
+              <li><span class="btn btn-default">Business <span class="badge">x</span></span><li>
+        </ul>
+      </div>
+    </div>
+  </article>
+
+  <form method="post" action="/projects/project_id/review">
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
 </div>

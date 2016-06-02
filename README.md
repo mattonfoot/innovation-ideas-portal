@@ -1,5 +1,5 @@
-#Express Multichain Bootstrap
-This is a bootstrap project for rapid experimentation on Multichain Blockchains using light-weight HTML interfaces
+#Innovation ideas portal
+A simple portal website for collecting and gaining support for innovation ideas backlogs
 
 ##Pre-requisites
 Start by ensuring that you have Docker and Docker compose installed. If you do not please follow use the installer for your system https://docs.docker.com/windows/.

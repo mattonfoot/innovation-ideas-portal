@@ -3,5 +3,19 @@
     <h1>{{title}}</h1>
   </div>
 
-  <p class="lead">This is a bootstrap project for rapid experimentation on Multichain blockchains using light-weight HTML interfaces</p>
+  <form method="post" action="/projects/project_id/draft">
+    <div class="form-group">
+      <label for="title">Project Title</label>
+      <input type="text" class="form-control" name="title" id="title" placeholder="Project title...">
+    </div>
+    <div class="form-group">
+      <label for="markdown">Description</label>
+      <textarea class="form-control" name="markdown" id="markdown" placeholder="Descriptive summary..."></textarea>
+    </div>
+    <div class="form-group">
+      <label for="tags">Tags</label>
+      <input type="text" class="form-control" name="tags" id="tags" placeholder="Comma seperated tag list...">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
 </div>
