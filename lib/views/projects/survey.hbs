@@ -22,11 +22,7 @@
     </ol>
   </article>
 
-  <form method="post" action="/projects/project_id/survey">
-    <button type="submit" class="btn btn-default">Back</button>
-    <button type="submit" class="btn btn-primary">Save</button>
-    <button type="submit" class="btn btn-primary">Save &amp; Continue</button>
-    <button type="submit" class="btn btn-text">Delete</button>
-    <button type="submit" class="btn btn-default">Preview</button>
+  <form method="post" action="/projects/{{{ project.id }}}/survey">
+    {{> projectactions }}
   </form>
 </div>
