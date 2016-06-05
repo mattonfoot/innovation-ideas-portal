@@ -17,6 +17,7 @@
     "graceful-fs": "4.1.4",
     "less-middleware": "2.1.0",
     "morgan": "1.5.3",
+    "nedb": "1.8.0",
     "node-uuid": "1.4.7",
     "serve-favicon": "2.2.1"
   }

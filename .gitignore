@@ -9,11 +9,6 @@ lib-cov
 
 pids
 logs
-results
-coverage
-reports
-browser
-containers/express/dist
 
 node_modules
 npm-debug.log
