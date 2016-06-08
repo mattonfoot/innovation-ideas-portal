@@ -1,17 +1,53 @@
 <div class="container">
   <div class="page-header">
-    <h1>{{title}}</h1>
+    <h1>Projects</h1>
   </div>
-
-  <p class="lead">This is a bootstrap project for rapid experimentation on Multichain blockchains using light-weight HTML interfaces</p>
 </div>
 
 <div class="container">
-  <h2>Gathering support</h2>
+  <h2>Published</h2>
 
-  <div class="row">
-    {{#each projects as |project|}}
-      {{> projectTile project }}
+  <div class="row grid">
+    {{#each published as |publishedProject|}}
+    <div class="col-sm-12 col-md-3 grid-item">
+      {{> projectTile publishedProject }}
+    </div>
+    {{/each}}
+  </div>
+</div>
+
+<div class="container">
+  <h2>Work in progress</h2>
+
+  <div class="row grid">
+    {{#each wip as |wipProject|}}
+    <div class="col-sm-12 col-md-3 grid-item">
+      {{> projectTile wipProject }}
+    </div>
+    {{/each}}
+  </div>
+</div>
+
+<div class="container">
+  <h2>Candidates for lab</h2>
+
+  <div class="row grid">
+    {{#each candidatesForLab as |labProject|}}
+    <div class="col-sm-12 col-md-3 grid-item">
+      {{> projectTile labProject }}
+    </div>
+    {{/each}}
+  </div>
+</div>
+
+<div class="container">
+  <h2>Consultation only</h2>
+
+  <div class="row grid">
+    {{#each consultationOnly as |consultationProject|}}
+    <div class="col-sm-12 col-md-3 grid-item">
+      {{> projectTile consultationProject }}
+    </div>
     {{/each}}
   </div>
 </div>
@@ -19,12 +55,15 @@
 <div class="container">
   <h2>In Draft</h2>
 
-  <div class="row">
-    {{#each drafts as |draft|}}
-    {{> projectTile draft }}
+  <div class="row grid">
+    {{#each inDraft as |draftProject|}}
+    <div class="col-sm-12 col-md-3 grid-item">
+      {{> projectTile draftProject }}
+    </div>
     {{/each}}
   </div>
 </div>
+
 <div class="container">
   <div class="panel panel-default">
     <p>You must agree to adhear to the guidlines and houserules if you create a new project

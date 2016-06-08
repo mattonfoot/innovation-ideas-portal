@@ -1,7 +1,52 @@
 <div class="container">
-  <div class="page-header">
-    <h1>{{title}}</h1>
-  </div>
+  <article>
+    <div class="project-header">
+      <h1 class="project-title">{{ project.title }}</h1>
+    </div>
 
-  <p class="lead">This is a bootstrap project for rapid experimentation on Multichain blockchains using light-weight HTML interfaces</p>
+    <div class="row">
+      <div class="col-sm-12 col-md-9">
+        <ul class="nav nav-tabs">
+          <li role="presentation" class="active"><a href="/projects/{{ project._id }}">Description</a></li>
+          <li role="presentation"><a href="/projects/{{ project._id }}/updates">Updates <span class="badge badge-info">0</span></a></li>
+          <li role="presentation"><a href="/projects/{{ project._id }}/comments">Comments <span class="badge badge-info">0</span></a></li>
+          <li role="presentation"><a href="/projects/{{ project._id }}/official">Official Comments <span class="badge badge-info">0</span></a></li>
+          <li role="presentation"><a href="/projects/{{ project._id }}/repository">Repository</a></li>
+        </ul>
+        <div class="project-details">
+          <div class="alert alert-info"><strong>Status:</strong> {{ project.status }}</div>
+          {{#if project.summary }}
+          <section class="project-summary">
+            <p class="lead">{{ project.summary }}</p>
+          </section>
+          {{/if}}
+          <section class="project-description">
+            <div>{{{ project.description }}}</div>
+          </section>
+          <section class="project-link">
+            <p>Project link on JIRA: <a href="{{ project.link }}">{{ project.link }}</a></p>
+          </section>
+          <section class="project-tags">
+            <ul class="project-tag-list">
+              {{#each project.tags as |tag|}}
+              <li class="project-tag">{{ tag }}</li>
+              {{/each}}
+            </ul>
+          </section>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-3">
+        {{> projectaside project }}
+        <div class="thumbnail project-creator">
+          <div class="caption">
+            <div class="project-creator-heading">
+              <h3 class="project-creator-title">Created by</h3>
+            </div>
+            <p class="project-creator-user">{{ project.user }}</p>
+            <p class="project-creator-submitted">{{ project.created }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
 </div>

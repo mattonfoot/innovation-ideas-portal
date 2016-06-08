@@ -1,13 +1,5 @@
-<a href="/projects/{{ _id }}" class="thumbnail project-tile">
-  <article class="caption">
-    <header class="project-tile-heading">
-      <h3 class="project-tile-title">{{ title }}</h3>
-      {{#if summary}}
-      <p class="project-tile-summary">{{ summary }}</p>
-      {{/if}}
-      <p class="project-tile-user">{{ user }}</p>
-      <p class="project-tile-submitted">{{ created }}</p>
-    </header>
+<article class="thumbnail project-tile">
+  <div class="caption">
     <section class="project-tile-support">
       <div class="row">
         <div class="col-sm-6 supporters">
@@ -23,5 +15,9 @@
     <section class="project-tile-status">
       <p>Status: <span class="status">{{ status }}</span></p>
     </section>
-  </article>
-</a>
+    <section class="project-tile-actions">
+      <button class="btn btn-primary btn-block">Support</button>
+      <button class="btn btn-default btn-block">Follow</button>
+    </section>
+  </div>
+</article>
