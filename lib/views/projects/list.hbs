@@ -17,6 +17,18 @@
 </div>
 
 <div class="container">
+  <h2>Gathering support</h2>
+
+  <div class="row grid">
+    {{#each triaged as |backlogProject|}}
+    <div class="col-sm-12 col-md-3 grid-item">
+      {{> projectTile backlogProject }}
+    </div>
+    {{/each}}
+  </div>
+</div>
+
+<div class="container">
   <h2>Work in progress</h2>
 
   <div class="row grid">
@@ -47,18 +59,6 @@
     {{#each consultationOnly as |consultationProject|}}
     <div class="col-sm-12 col-md-3 grid-item">
       {{> projectTile consultationProject }}
-    </div>
-    {{/each}}
-  </div>
-</div>
-
-<div class="container">
-  <h2>In Draft</h2>
-
-  <div class="row grid">
-    {{#each inDraft as |draftProject|}}
-    <div class="col-sm-12 col-md-3 grid-item">
-      {{> projectTile draftProject }}
     </div>
     {{/each}}
   </div>
