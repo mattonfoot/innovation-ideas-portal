@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="page-header">
+    <h1>Discover</h1>
+  </div>
+</div>
+
+<div class="container">
+  <h2>Projects</h2>
+
+  <div class="row">
+    <div class="col-md-9">
+      <div class="row grid3">
+        {{#each projects as |project|}}
+        <div class="col-sm-12 col-md-4 grid-item">
+          {{> projectTile project }}
+        </div>
+        {{/each}}
+      </div>
+    </div>
+    <div class="col-md-3">
+      <h3>Filter by</h3>
+      <h4>Tags</h4>
+      <ul class="nav nav-list">
+        <li><a href="/search?status=published">Published</a></li>
+        <li><a href="/search?status=triaged">Triaged</a></li>
+        <li><a href="/search?status=future">Future</a></li>
+        <li><a href="/search?status=wip">Work in progress</a></li>
+        <li><a href="/search?status=paused">Paused</a></li>
+        <li><a href="/search?status=candidates%20for%20lab">candidates for Lab</a></li>
+        <li><a href="/search?status=consultation%20only">Consultation only</a></li>
+        <li><a href="/search?status=published">published</a></li>
+      </ul>
+    </div>
+  </div>
+</div>

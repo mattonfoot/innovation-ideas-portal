@@ -7,7 +7,7 @@
 <div class="container">
   <h2>Published</h2>
 
-  <div class="row grid">
+  <div class="row grid4">
     {{#each published as |publishedProject|}}
     <div class="col-sm-12 col-md-3 grid-item">
       {{> projectTile publishedProject }}
@@ -19,7 +19,7 @@
 <div class="container">
   <h2>Gathering support</h2>
 
-  <div class="row grid">
+  <div class="row grid4">
     {{#each triaged as |backlogProject|}}
     <div class="col-sm-12 col-md-3 grid-item">
       {{> projectTile backlogProject }}
@@ -31,7 +31,7 @@
 <div class="container">
   <h2>Work in progress</h2>
 
-  <div class="row grid">
+  <div class="row grid4">
     {{#each wip as |wipProject|}}
     <div class="col-sm-12 col-md-3 grid-item">
       {{> projectTile wipProject }}
@@ -43,7 +43,7 @@
 <div class="container">
   <h2>Candidates for lab</h2>
 
-  <div class="row grid">
+  <div class="row grid4">
     {{#each candidatesForLab as |labProject|}}
     <div class="col-sm-12 col-md-3 grid-item">
       {{> projectTile labProject }}
@@ -55,7 +55,7 @@
 <div class="container">
   <h2>Consultation only</h2>
 
-  <div class="row grid">
+  <div class="row grid4">
     {{#each consultationOnly as |consultationProject|}}
     <div class="col-sm-12 col-md-3 grid-item">
       {{> projectTile consultationProject }}
@@ -66,7 +66,9 @@
 
 <div class="container">
   <div class="panel panel-default">
-    <p>You must agree to adhear to the guidlines and houserules if you create a new project
-      <a href="./draft" class="btn btn-default">I agree</a></p>
-  </div>
+    <div class="panel-body">
+      <p>You must agree to adhear to the guidlines and houserules if you create a new project
+        <a href="./draft" class="btn btn-default">I agree</a></p>
+      </div>
+    </div>
 </div>
