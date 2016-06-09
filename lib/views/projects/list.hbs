@@ -1,74 +1,72 @@
-<div class="container">
-  <div class="page-header">
+<main id="content" class="group" role="main">
+  <header class="page-header">
     <h1>Projects</h1>
-  </div>
-</div>
+  </header>
 
-<div class="container">
-  <h2>Published</h2>
+  <div class="feature-panel">
+    <h2>Published</h2>
 
-  <div class="row grid4">
-    {{#each published as |publishedProject|}}
-    <div class="col-sm-12 col-md-3 grid-item">
-      {{> projectTile publishedProject }}
+    <div class="row grid4">
+      {{#each published as |publishedProject|}}
+      <div class="grid-item">
+        {{> projectTile publishedProject }}
+      </div>
+      {{/each}}
     </div>
-    {{/each}}
   </div>
-</div>
 
-<div class="container">
-  <h2>Gathering support</h2>
+  <div class="feature-panel">
+    <h2>Gathering support</h2>
 
-  <div class="row grid4">
-    {{#each triaged as |backlogProject|}}
-    <div class="col-sm-12 col-md-3 grid-item">
-      {{> projectTile backlogProject }}
+    <div class="row grid4">
+      {{#each triaged as |backlogProject|}}
+      <div class="grid-item">
+        {{> projectTile backlogProject }}
+      </div>
+      {{/each}}
     </div>
-    {{/each}}
   </div>
-</div>
 
-<div class="container">
-  <h2>Work in progress</h2>
+  <div class="feature-panel">
+    <h2>Work in progress</h2>
 
-  <div class="row grid4">
-    {{#each wip as |wipProject|}}
-    <div class="col-sm-12 col-md-3 grid-item">
-      {{> projectTile wipProject }}
+    <div class="row grid4">
+      {{#each wip as |wipProject|}}
+      <div class="grid-item">
+        {{> projectTile wipProject }}
+      </div>
+      {{/each}}
     </div>
-    {{/each}}
   </div>
-</div>
 
-<div class="container">
-  <h2>Candidates for lab</h2>
+  <div class="feature-panel">
+    <h2>Candidates for lab</h2>
 
-  <div class="row grid4">
-    {{#each candidatesForLab as |labProject|}}
-    <div class="col-sm-12 col-md-3 grid-item">
-      {{> projectTile labProject }}
+    <div class="row grid4">
+      {{#each candidatesForLab as |labProject|}}
+      <div class="grid-item">
+        {{> projectTile labProject }}
+      </div>
+      {{/each}}
     </div>
-    {{/each}}
   </div>
-</div>
 
-<div class="container">
-  <h2>Consultation only</h2>
+  <div class="feature-panel">
+    <h2>Consultation only</h2>
 
-  <div class="row grid4">
-    {{#each consultationOnly as |consultationProject|}}
-    <div class="col-sm-12 col-md-3 grid-item">
-      {{> projectTile consultationProject }}
+    <div class="row grid4">
+      {{#each consultationOnly as |consultationProject|}}
+      <div class="grid-item">
+        {{> projectTile consultationProject }}
+      </div>
+      {{/each}}
     </div>
-    {{/each}}
   </div>
-</div>
 
-<div class="container">
   <div class="panel panel-default">
     <div class="panel-body">
       <p>You must agree to adhear to the guidlines and houserules if you create a new project
         <a href="./draft" class="btn btn-default">I agree</a></p>
-      </div>
     </div>
-</div>
+  </div>
+</main>

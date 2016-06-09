@@ -1,7 +1,72 @@
-<div class="container">
-  <div class="page-header">
-    <h1>{{title}}</h1>
+<main id="content" class="group" role="main">
+  <header class="page-header">
+    <h1>Tech innovation and research</h1>
+  </header>
+
+  <div class="feature-panel">
+    <h2>Published</h2>
+
+    <div class="row grid4">
+      {{#each published as |publishedProject|}}
+      <div class="grid-item">
+        {{> projectTile publishedProject }}
+      </div>
+      {{/each}}
+    </div>
   </div>
 
-  <p class="lead">This is a project for rapid experimentation using light-weight HTML interfaces</p>
-</div>
+  <div class="feature-panel">
+    <h2>Gathering support</h2>
+
+    <div class="row grid4">
+      {{#each triaged as |backlogProject|}}
+      <div class="grid-item">
+        {{> projectTile backlogProject }}
+      </div>
+      {{/each}}
+    </div>
+  </div>
+
+  <div class="feature-panel">
+    <h2>Work in progress</h2>
+
+    <div class="row grid4">
+      {{#each wip as |wipProject|}}
+      <div class="grid-item">
+        {{> projectTile wipProject }}
+      </div>
+      {{/each}}
+    </div>
+  </div>
+
+  <div class="feature-panel">
+    <h2>Candidates for lab</h2>
+
+    <div class="row grid4">
+      {{#each candidatesForLab as |labProject|}}
+      <div class="grid-item">
+        {{> projectTile labProject }}
+      </div>
+      {{/each}}
+    </div>
+  </div>
+
+  <div class="feature-panel">
+    <h2>Consultation only</h2>
+
+    <div class="row grid4">
+      {{#each consultationOnly as |consultationProject|}}
+      <div class="grid-item">
+        {{> projectTile consultationProject }}
+      </div>
+      {{/each}}
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <p>You must agree to adhear to the guidlines and houserules if you create a new project
+        <a href="./draft" class="btn btn-default">I agree</a></p>
+    </div>
+  </div>
+</main>

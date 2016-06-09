@@ -15,3 +15,8 @@ npm-debug.log
 
 .DS_Store
 *-temp
+
+assets/images
+assets/javascripts
+assets/stylesheets
+views/layouts/govuk_template.html
